@@ -31,4 +31,6 @@ export class HomeComponent implements OnInit {
   wuerfelCurrentMedien() {
     this.randomMedium = this.randomMediumService.getRandomMedium();
   }
+
+  protected readonly Object = Object;
 }
