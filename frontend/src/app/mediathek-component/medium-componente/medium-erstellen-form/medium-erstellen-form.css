@@ -1,6 +1,10 @@
 #modal-close-btn:hover {
   cursor: pointer;
 }
+#modal-btn-container {
+  display: flex;
+  gap: 10px;
+}
 
 .m-btn {
   width: 120px;
@@ -19,6 +23,10 @@
 
 #medium-erstellen-btn {
   color: white;
+  background-color: #3aca3a;
+}
+
+#medium-erstellen-btn:hover {
   background-color: #14b614;
 }
 
