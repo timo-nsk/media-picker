@@ -10,6 +10,7 @@ import {PlatformPipe} from '../platform.pipe';
   selector: 'app-home-component',
   imports: [CommonModule, StatistikComponent, MediumTypPipe, PlatformPipe],
   templateUrl: './home-component.html',
+  standalone: true,
   styleUrls: ['./home-component.css', '../../styles.css']
 })
 export class HomeComponent implements OnInit {

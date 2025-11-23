@@ -20,6 +20,7 @@ export interface MediathekStatistik {
   selector: 'statistik-component',
   imports: [],
   templateUrl: './statistik-component.html',
+  standalone: true,
   styleUrl: './statistik-component.css'
 })
 export class StatistikComponent implements OnInit{

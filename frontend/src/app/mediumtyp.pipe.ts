@@ -2,6 +2,7 @@ import {Pipe, PipeTransform} from '@angular/core';
 import {MediumTyp} from './domain/medium';
 
 @Pipe({
+  standalone: true,
   name: 'mediumTypTransform'
 })
 export class MediumTypPipe implements PipeTransform {
