@@ -1,6 +1,11 @@
+:root {
+  --font-primary: #3f3f3f;;
+}
+
 html {
   font-family: Helvetica, sans-serif;
-  font-size: 20px;
+  font-size: 1.25rem;
+  color: var(--font-primary);
 }
 
 body {
@@ -9,6 +14,16 @@ body {
 
 h1 {
   margin-bottom: 0;
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
 }
 
 p {

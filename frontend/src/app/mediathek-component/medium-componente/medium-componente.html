@@ -9,9 +9,9 @@
   </section>
   <section>
     <ng-container *ngFor="let status of Object.values(Status)">
-      <ng-container *ngIf="medienFilteredByStatus(status).length != 0">
+      @if (medienFilteredByStatus(status).length != 0) {
         <div class="medien-filter-container">
-          <h4 class="table-header">{{status | statusTransform}}</h4>
+          <h3>{{status | statusTransform}}</h3>
           <table class="table">
             <tbody>
             <tr *ngFor="let medium of medienFilteredByStatus(status)">
@@ -92,8 +92,8 @@
                 <!-- STATUS ÄNDERN-->
                 <td class=" medien-table-td">
                   <form [formGroup]="statusForm">
-                    <select formControlName="changedStatus" (change)="changeStatus(medium.mediumId)">
-                      <option selected disabled [value]="Status.BEENDET">Status ändern</option>
+                    <select class="form-select" formControlName="changedStatus" (change)="changeStatus(medium.mediumId)">
+                      <option value="" disabled>Status ändern</option>
                       <option [value]="Status.BEENDET">beendet</option>
                       <option *ngIf="mediumTyp == MediumTyp.FILM || mediumTyp == MediumTyp.SERIE || mediumTyp == MediumTyp.ANIME" [value]="Status.AM_SCHAUEN">am Schauen</option>
                       <option *ngIf="mediumTyp == MediumTyp.VIDEOSPIEL" [value]="Status.AM_SPIELEN">am Spielen</option>
@@ -122,7 +122,7 @@
             </tbody>
           </table>
         </div>
-      </ng-container>
+      }
     </ng-container>
   </section>
   <section>

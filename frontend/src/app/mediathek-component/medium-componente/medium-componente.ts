@@ -29,7 +29,7 @@ export class MediumComponente implements OnInit{
   medien! : any[];
 
   statusForm = new FormGroup({
-    changedStatus: new FormControl(null, Validators.required)
+    changedStatus: new FormControl("", Validators.required)
   })
 
   constructor() {
@@ -119,9 +119,8 @@ export class MediumComponente implements OnInit{
   }
 
   changeStatus(mediumId: string) {
-    console.log("change status of modul: ", mediumId);
-    console.log("status now: ", this.statusForm.get("changedStatus")?.value);
     let status = this.statusForm.get("changedStatus")?.value;
     this.mediumApiService.changeStatusByModulId(mediumId, status).subscribe();
+    this.ngOnInit();
   }
 }

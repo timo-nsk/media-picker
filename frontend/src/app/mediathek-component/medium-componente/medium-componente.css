@@ -31,10 +31,6 @@
   cursor: pointer;
 }
 
-.table-header {
-  color: #3f3f3f;
-}
-
 .medien-table-td {
   text-align: center;
   vertical-align: middle;
@@ -46,9 +42,10 @@
 }
 
 .loeschen-btn-container {
+  height: 60px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-content: center;
 }
 
 .loeschen-btn {
