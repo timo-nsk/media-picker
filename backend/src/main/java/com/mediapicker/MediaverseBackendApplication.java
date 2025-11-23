@@ -6,20 +6,22 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Profile;
 
 @SpringBootApplication
-public class MediaPickerBackendApplication {
+public class MediaverseBackendApplication {
 
   private final OfflineAppRegister offlineAppRegister;
 
-  public MediaPickerBackendApplication(OfflineAppRegister offlineAppRegister) {
+  public MediaverseBackendApplication(OfflineAppRegister offlineAppRegister) {
     this.offlineAppRegister = offlineAppRegister;
   }
 
   public static void main(String[] args) {
-    SpringApplication.run(MediaPickerBackendApplication.class, args);
+    SpringApplication.run(MediaverseBackendApplication.class, args);
   }
 
+  @Profile("dev")
   @Bean
   public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
     return args -> {
