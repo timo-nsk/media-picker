@@ -5,14 +5,14 @@ services:
     container_name: mediaverse-frontend
     image: tneskedev/mediaverse-frontend:latest
     ports:
-    - '4201:80'
+    - '4201:4201'
     networks:
       - mediaverse-network
   mediaverse-backend:
     container_name: mediaverse-backend
     image: tneskedev/mediaverse-backend:latest
     ports:
-      - '9756:81'
+      - '9756:9756'
     networks:
       - mediaverse-network
     env_file:

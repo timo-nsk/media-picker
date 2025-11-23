@@ -10,7 +10,7 @@ import {environment} from '../../environments/environment';
   providedIn: 'root'
 })
 export class MediumApiService {
-  BASE_URL = "http://localhost:9756";
+  BASE_URL = environment.backendBaseUrl;
   BASE_URL_ERSTELLEN = this.BASE_URL + "/medium-erstellen"
 
   constructor(private http: HttpClient) { }
