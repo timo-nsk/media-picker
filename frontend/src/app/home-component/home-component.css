@@ -17,6 +17,8 @@
 
 #uebersicht-container {
   display: flex;
+  gap: 40px;
+  margin-top: 40px;
 }
 
 .card {
@@ -24,7 +26,6 @@
   border: 0 solid transparent;
   border-radius: var(--border-radius);
   padding: 20px;
-  margin: 20px;
 }
 
 #aktuelle-medien-container {
